@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Header.module.css";
-import logo from "../../assets/images/skills/rvlogo2.png";
+import logo from "../../assets/images/rvv.png";
 import linkedinIcon from "../../assets/images/social-media/linkedin.svg";
 import githubIcon from "../../assets/images/social-media/github.svg";
 
