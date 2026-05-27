@@ -1,16 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 :root {
-  --color-bg: #05060d;
-  --color-bg-soft: #0b0d17;
-  --color-card: rgba(15, 17, 30, 0.72);
-  --color-card-border: rgba(255, 255, 255, 0.08);
-  --color-text: #ffffff;
-  --color-text-muted: #b8b8c7;
-  --color-purple: #a855f7;
-  --color-purple-dark: #811ef3;
-  --color-purple-light: #c084fc;
+  --color-bg: #07110c;
+  --color-bg-soft: #0c1710;
+  --color-card: rgba(16, 25, 18, 0.82);
+  --color-card-border: rgba(255, 255, 255, 0.1);
+
+  --color-text: #f5fff8;
+  --color-text-muted: #b8c8bd;
+
+  --color-green: #32cf6b;
+  --color-green-dark: #16af4e;
+  --color-green-light: #86efac;
+
   --font-main: "Inter", sans-serif;
   --font-mono: "Inter", sans-serif;
+
   --container-width: 1180px;
 }
 
@@ -20,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
 }
 
 body {
@@ -37,16 +43,16 @@ body::before {
   z-index: -2;
   background:
     radial-gradient(
-      circle at 85% 45%,
-      rgba(126, 34, 206, 0.38),
-      transparent 34%
+      circle at 75% 38%,
+      rgba(34, 197, 94, 0.24),
+      transparent 24%
     ),
     radial-gradient(
-      circle at 55% 100%,
-      rgba(88, 28, 135, 0.28),
-      transparent 35%
+      circle at 82% 78%,
+      rgba(34, 197, 94, 0.14),
+      transparent 30%
     ),
-    linear-gradient(180deg, #03040a 0%, #080914 100%);
+    linear-gradient(180deg, #061009 0%, #07110c 55%, #08140d 100%);
 }
 
 body::after {
@@ -55,15 +61,19 @@ body::after {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: linear-gradient(to bottom, black, transparent);
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
 }
 
 button,
 a {
   font-family: inherit;
+}
+
+button {
+  border: 0;
 }
 
 a {
@@ -81,4 +91,11 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 72px;
+}
+
+@media (max-width: 768px) {
+  main {
+    gap: 56px;
+  }
 }

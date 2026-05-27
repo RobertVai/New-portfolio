@@ -2,12 +2,14 @@
   position: sticky;
   top: 0;
   z-index: 20;
-  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(7, 17, 12, 0.76);
+  backdrop-filter: blur(18px);
 }
 
 .inner {
   width: min(100% - 40px, var(--container-width));
-  height: 76px;
+  height: 72px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -15,15 +17,22 @@
 }
 
 .logo {
-  display: inline-flex;
-  align-items: center;
-  width: 54px;
-  height: 54px;
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    var(--color-green),
+    var(--color-green-dark)
+  );
+  box-shadow: 0 0 32px rgba(34, 197, 94, 0.24);
 }
 
 .logo img {
-  width: 100%;
-  height: 100%;
+  width: 78%;
+  height: 78%;
   object-fit: contain;
   display: block;
 }
@@ -37,28 +46,26 @@
 .nav a {
   position: relative;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-text-muted);
   transition: color 0.2s ease;
 }
 
-.nav a:hover {
-  color: var(--color-purple-dark);
-}
-
+.nav a:hover,
 .nav a.active {
-  color: var(--color-purple-dark);
+  color: var(--color-green);
 }
 
 .nav a.active::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -18px;
+  bottom: -24px;
   width: 100%;
   height: 2px;
-  background: var(--color-purple);
   border-radius: 999px;
+  background: var(--color-green);
+  box-shadow: 0 0 18px rgba(74, 222, 128, 0.7);
 }
 
 .socials {
@@ -67,18 +74,31 @@
   gap: 22px;
 }
 
+.socials a {
+  opacity: 0.72;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.socials a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
 .socials img {
-  max-width: 20px;
+  max-width: 18px;
+  display: block;
 }
 
 .menu-button {
-  display: none;
   width: 42px;
   height: 42px;
   padding: 0;
+  display: none;
   border: 1px solid var(--color-card-border);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.035);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
   cursor: pointer;
 }
 
@@ -114,7 +134,7 @@
 
   .nav {
     position: absolute;
-    top: 72px;
+    top: 76px;
     left: 0;
     right: 0;
     padding: 18px;
@@ -123,8 +143,8 @@
     align-items: flex-start;
     gap: 18px;
     border: 1px solid var(--color-card-border);
-    border-radius: 12px;
-    background: rgba(15, 17, 30, 0.96);
+    border-radius: 16px;
+    background: rgba(8, 20, 13, 0.98);
     box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
   }
 

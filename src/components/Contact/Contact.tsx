@@ -4,12 +4,16 @@ export function Contact() {
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.left}>
-        <h2>
+        <p className={styles.label}>
           <span></span>
-          Let's Work Together
-        </h2>
+          Available for work
+        </p>
 
-        <p>I'm always open to new opportunities and interesting projects.</p>
+        <h2>Let’s work together</h2>
+
+        <p className={styles.description}>
+          Open to new opportunities and interesting projects.
+        </p>
       </div>
 
       <div className={styles.right}>
@@ -17,15 +21,15 @@ export function Contact() {
           href="mailto:robert.vaitechovskij@gmail.com"
           className={styles.button}
         >
-          Get In Touch ↗
-        </a>
-
-        <a href="mailto:robert.vaitechovskij@gmail.com" className={styles.info}>
-          ✉<span>vaitechovskij@gmail.com</span>
+          Get in touch ↗
         </a>
 
         <div className={styles.info}>
-          ⌖<span>Remote / Worldwide</span>
+          <a href="mailto:robert.vaitechovskij@gmail.com">
+            ✉ <span>vaitechovskij@gmail.com</span>
+          </a>
+
+          <p>⌖ Remote / Worldwide</p>
         </div>
       </div>
     </section>

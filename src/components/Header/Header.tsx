@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./Header.module.css";
 import logo from "../../assets/images/skills/rvlogo2.png";
 import linkedinIcon from "../../assets/images/social-media/linkedin.svg";
@@ -16,32 +16,28 @@ export function Header() {
   const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      let currentSection = "home";
+  const handleNavClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
+    event.preventDefault();
 
-      navLinks.forEach((link) => {
-        const section = document.getElementById(link.id);
+    const section = document.getElementById(id);
 
-        if (section && window.scrollY >= section.offsetTop - 160) {
-          currentSection = link.id;
-        }
-      });
+    if (!section) {
+      return;
+    }
 
-      setActiveSection(currentSection);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const handleNavClick = (id: string) => {
     setActiveSection(id);
     setIsMenuOpen(false);
+
+    const headerHeight = 88;
+    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+      top: sectionTop - headerHeight,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -50,7 +46,7 @@ export function Header() {
         <a
           href="#home"
           className={styles.logo}
-          onClick={() => handleNavClick("home")}
+          onClick={(event) => handleNavClick(event, "home")}
         >
           <img src={logo} alt="Robert Vaitechovskij Logo" />
         </a>
@@ -62,7 +58,7 @@ export function Header() {
             <a
               key={link.id}
               href={`#${link.id}`}
-              onClick={() => handleNavClick(link.id)}
+              onClick={(event) => handleNavClick(event, link.id)}
               className={activeSection === link.id ? styles.active : ""}
             >
               {link.title}

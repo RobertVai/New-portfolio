@@ -7,6 +7,7 @@ import nodejsIcon from "../../assets/images/skills/nodejs.png";
 import mongodbIcon from "../../assets/images/skills/mongodb.png";
 import cssIcon from "../../assets/images/skills/css.png";
 import htmlIcon from "../../assets/images/skills/html.png";
+
 import vscodeIcon from "../../assets/images/tools/vscode.png";
 import githubIcon from "../../assets/images/tools/github.png";
 import figmaIcon from "../../assets/images/tools/figma.png";
@@ -38,18 +39,19 @@ const tools: Skill[] = [
 
 export function InfoSection() {
   return (
-    <section id="about" className={styles.section}>
+    <section className={styles.section}>
       <div className={styles.card}>
-        <div className={styles.about}>
+        <div id="about" className={styles.about}>
           <h2>
             <span></span>
             About Me
           </h2>
 
           <p>
-            I'm a passionate Front-End Developer who loves creating clean,
-            modern and user-friendly web applications. I focus on writing
-            high-quality code and constantly improving my skills.
+            I&apos;m a Front-End Developer focused on building clean, responsive
+            and user-friendly web applications with React, TypeScript and modern
+            CSS. I enjoy turning ideas into polished interfaces and constantly
+            improving my code quality.
           </p>
         </div>
 
@@ -82,8 +84,9 @@ export function InfoSection() {
             {tools.map((tool) => (
               <div className={styles.item} key={tool.name}>
                 <div className={styles.icon}>
-                  <img src={tool.icon} alt="" />
+                  <img src={tool.icon} alt={tool.name} />
                 </div>
+
                 <p>{tool.name}</p>
               </div>
             ))}

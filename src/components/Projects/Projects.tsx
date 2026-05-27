@@ -56,67 +56,63 @@ const projects: Project[] = [
 export function Projects() {
   return (
     <section id="projects" className={styles.section}>
-      <div className={styles.card}>
-        <h2 className={styles.title}>
+      <div className={styles.heading}>
+        <p>
           <span></span>
-          Featured Projects
-        </h2>
+          Projects
+        </p>
 
-        <div className={styles.grid}>
-          {projects.map((project) => (
-            <article className={styles.project} key={project.title}>
-              <div className={styles["image-wrapper"]}>
-                {project.image ? (
-                  <img src={project.image} alt={project.title} />
-                ) : (
-                  <div className={styles["coming-soon"]}>
-                    <span>Coming Soon</span>
-                  </div>
-                )}
-              </div>
+        <h2>Selected work</h2>
 
-              <div className={styles.content}>
-                <div className={styles.top}>
-                  <div>
-                    <h3>{project.title}</h3>
+        <span>A handful of things I've built recently.</span>
+      </div>
 
-                    {project.isComingSoon && (
-                      <span className={styles.badge}>Soon</span>
-                    )}
-                  </div>
+      <div className={styles.grid}>
+        {projects.map((project) => (
+          <article className={styles.project} key={project.title}>
+            <div className={styles["image-wrapper"]}>
+              {project.image ? (
+                <img src={project.image} alt={project.title} />
+              ) : (
+                <div className={styles["coming-soon"]}>
+                  <span>Coming Soon</span>
+                </div>
+              )}
+            </div>
 
-                  <div className={styles.links}>
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Live ↗
-                      </a>
-                    )}
+            <div className={styles.content}>
+              <div className={styles.top}>
+                <div>
+                  <h3>{project.title}</h3>
 
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      GitHub ↗
+                  {project.isComingSoon && (
+                    <span className={styles.badge}>Soon</span>
+                  )}
+                </div>
+
+                <div className={styles.links}>
+                  {project.liveUrl && (
+                    <a href={project.liveUrl} target="_blank" rel="noreferrer">
+                      Live ↗
                     </a>
-                  </div>
-                </div>
+                  )}
 
-                <p>{project.description}</p>
-
-                <div className={styles.tags}>
-                  {project.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
+                  <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                    GitHub ↗
+                  </a>
                 </div>
               </div>
-            </article>
-          ))}
-        </div>
+
+              <p>{project.description}</p>
+
+              <div className={styles.tags}>
+                {project.tags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
