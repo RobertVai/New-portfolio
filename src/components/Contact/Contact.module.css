@@ -59,6 +59,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   border-radius: 999px;
   background: linear-gradient(
     135deg,
@@ -70,6 +71,13 @@
   font-weight: 900;
   box-shadow: 0 16px 45px rgba(34, 197, 94, 0.22);
   transition: transform 0.2s ease;
+}
+
+.button img {
+  width: 12px;
+  height: 12px;
+  display: block;
+  filter: brightness(0);
 }
 
 .button:hover {
@@ -84,9 +92,19 @@
 .info a,
 .info p {
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: var(--color-text-muted);
   font-size: 13px;
   font-weight: 700;
+}
+
+.info img {
+  width: 14px;
+  height: 14px;
+  display: block;
+  opacity: 0.8;
 }
 
 .info a:hover {

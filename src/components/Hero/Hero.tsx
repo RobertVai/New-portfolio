@@ -1,6 +1,7 @@
 import styles from "./Hero.module.css";
 import infinityIcon from "../../assets/images/infinity.svg";
 import starsIcon from "../../assets/images/stars.svg";
+import arrowUpIcon from "../../assets/images/arrow-up.svg";
 export function Hero() {
   return (
     <section id="home" className={styles.hero}>
@@ -30,11 +31,11 @@ export function Hero() {
 
         <div className={styles.actions}>
           <a href="#projects" className={styles["primary-button"]}>
-            View Projects ↗
+            View Projects <img src={arrowUpIcon} alt="" />
           </a>
 
           <a href="#contact" className={styles["secondary-button"]}>
-            Contact Me ↗
+            Contact Me <img src={arrowUpIcon} alt="" />
           </a>
         </div>
 

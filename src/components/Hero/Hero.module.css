@@ -113,6 +113,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   border-radius: 999px;
   font-size: 14px;
   font-weight: 800;
@@ -121,6 +122,21 @@
     border-color 0.2s ease,
     background 0.2s ease,
     box-shadow 0.2s ease;
+}
+
+.primary-button img,
+.secondary-button img {
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+
+.primary-button img {
+  filter: brightness(0);
+}
+
+.secondary-button img {
+  opacity: 0.9;
 }
 
 .primary-button {
