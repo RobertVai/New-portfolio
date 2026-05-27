@@ -1,0 +1,145 @@
+.hero {
+  width: min(100% - 40px, var(--container-width));
+  margin: 0 auto;
+  min-height: 395px;
+  display: flex;
+  align-items: center;
+  padding: 48px 0 52px;
+}
+.content {
+  max-width: 760px;
+}
+
+.greeting {
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--color-purple-dark);
+}
+
+.greeting span {
+  color: var(--color-text);
+}
+
+.title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-main);
+  font-size: 5rem;
+  line-height: 0.9;
+  letter-spacing: -1px;
+  font-weight: 600;
+  width: max-content;
+  max-width: 100%;
+  padding-right: 12px;
+}
+
+.title span {
+  display: block;
+}
+
+.gradientText {
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+
+  background: linear-gradient(360deg, #d998ff 0%, #811ef3 45%, #aa9bc4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.role {
+  margin: 18px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: var(--color-text);
+}
+
+.role span {
+  color: var(--color-purple-dark);
+  font-weight: 700;
+}
+
+.description {
+  max-width: 455px;
+  margin: 22px 0 0;
+  font-family: var(--font-mono);
+  color: #d1d1dc;
+  font-size: 12px;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+.actions {
+  margin-top: 27px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-width: 144px;
+  height: 43px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 800;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #b653ff 0%, #7c3aed 100%);
+  color: white;
+  box-shadow: 0 12px 35px rgba(168, 85, 247, 0.26);
+}
+
+.secondaryButton {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.015);
+  color: var(--color-text);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.secondaryButton:hover {
+  border-color: var(--color-purple);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 42px 0 48px;
+  }
+
+  .title {
+    width: auto;
+    font-size: clamp(46px, 13vw, 64px);
+    letter-spacing: -2.5px;
+    padding-right: 0;
+  }
+
+  .role {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+}

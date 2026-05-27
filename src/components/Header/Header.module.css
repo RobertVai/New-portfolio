@@ -1,0 +1,146 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(16px);
+}
+
+.inner {
+  width: min(100% - 40px, var(--container-width));
+  height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.nav a {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--color-purple-dark);
+}
+
+.nav a.active {
+  color: var(--color-purple-dark);
+}
+
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+  width: 100%;
+  height: 2px;
+  background: var(--color-purple);
+  border-radius: 999px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.socials img {
+  max-width: 20px;
+}
+
+.menu-button {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--color-card-border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  cursor: pointer;
+}
+
+.menu-button span {
+  width: 18px;
+  height: 2px;
+  display: block;
+  margin: 4px auto;
+  border-radius: 999px;
+  background: var(--color-text);
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.menu-button-open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-button-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button-open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    position: relative;
+    width: min(100% - 32px, var(--container-width));
+  }
+
+  .nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    padding: 18px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    border: 1px solid var(--color-card-border);
+    border-radius: 12px;
+    background: rgba(15, 17, 30, 0.96);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  }
+
+  .nav-open {
+    display: flex;
+  }
+
+  .nav a.active::after {
+    display: none;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
