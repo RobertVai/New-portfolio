@@ -3,6 +3,7 @@ import audiophileProject from "../../assets/images/projects/audiophile.png";
 import bookmarkProject from "../../assets/images/projects/bookmarkapp.png";
 import moviesProject from "../../assets/images/projects/moviesapp.png";
 import financeProject from "../../assets/images/projects/finance.png";
+import arrowUpIcon from "../../assets/images/arrow-up.svg";
 
 type Project = {
   title: string;
@@ -93,12 +94,12 @@ export function Projects() {
                 <div className={styles.links}>
                   {project.liveUrl && (
                     <a href={project.liveUrl} target="_blank" rel="noreferrer">
-                      Live ↗
+                      Live <img src={arrowUpIcon} alt="" />
                     </a>
                   )}
 
                   <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                    GitHub ↗
+                    GitHub <img src={arrowUpIcon} alt="" />
                   </a>
                 </div>
               </div>
