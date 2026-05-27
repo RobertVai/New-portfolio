@@ -21,7 +21,7 @@ const projects: Project[] = [
     description:
       "A finance dashboard for tracking income, expenses and personal budget.",
     image: financeProject,
-    tags: ["React", "TypeScript", "CSS Modules", "Finance"],
+    tags: ["React", "TypeScript", "CSS Modules"],
     githubUrl: "https://github.com/RobertVai/Personal-finance-app",
     liveUrl: "https://personal-finance-app-nine-tau.vercel.app/",
   },
@@ -48,7 +48,7 @@ const projects: Project[] = [
     description:
       "Movie discovery application with search, trending movies, recommendations and a clean dashboard-style interface.",
     image: moviesProject,
-    tags: ["React", "TypeScript", "API", "CSS Modules"],
+    tags: ["React", "TypeScript", "CSS Modules"],
     liveUrl: "https://movies-web-app-gules.vercel.app/",
     githubUrl: "https://github.com/RobertVai/Movies-web-app",
   },
