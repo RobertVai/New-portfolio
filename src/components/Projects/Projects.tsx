@@ -2,6 +2,7 @@ import styles from "./Projects.module.css";
 import audiophileProject from "../../assets/images/projects/audiophile.png";
 import bookmarkProject from "../../assets/images/projects/bookmarkapp.png";
 import moviesProject from "../../assets/images/projects/moviesapp.png";
+import financeProject from "../../assets/images/projects/finance.png";
 
 type Project = {
   title: string;
@@ -17,7 +18,8 @@ const projects: Project[] = [
   {
     title: "Personal Finance App",
     description:
-      "A finance dashboard for tracking income, expenses and personal budget. The project will be added soon.",
+      "A finance dashboard for tracking income, expenses and personal budget.",
+    image: financeProject,
     tags: ["React", "TypeScript", "CSS Modules", "Finance"],
     githubUrl: "https://github.com/RobertVai/Personal-finance-app",
     liveUrl: "https://personal-finance-app-nine-tau.vercel.app/",

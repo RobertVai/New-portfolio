@@ -3,7 +3,6 @@ import styles from "./InfoSection.module.css";
 import javascriptIcon from "../../assets/images/skills/javascript.png";
 import typescriptIcon from "../../assets/images/skills/typescript.png";
 import reactIcon from "../../assets/images/skills/react.png";
-import nextjsIcon from "../../assets/images/skills/nextjs.png";
 import nodejsIcon from "../../assets/images/skills/nodejs.png";
 import mongodbIcon from "../../assets/images/skills/mongodb.png";
 import cssIcon from "../../assets/images/skills/css.png";
@@ -25,7 +24,6 @@ const skills: Skill[] = [
   { name: "JavaScript", icon: javascriptIcon },
   { name: "TypeScript", icon: typescriptIcon },
   { name: "React", icon: reactIcon },
-  { name: "Next.js", icon: nextjsIcon },
   { name: "Node.js", icon: nodejsIcon },
   { name: "MongoDB", icon: mongodbIcon },
 ];
